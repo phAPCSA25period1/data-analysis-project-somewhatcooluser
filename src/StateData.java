@@ -9,17 +9,20 @@
  *  - Override toString() to display the object's data
  *  - Add Javadoc comments for the class and all methods
  */
-public class Data {
+public class StateData {
 
     // TODO: Add at least 3 private attributes
-    // Example:
-    // private String name;
-    // private int population;
-    // private double value;
+    private String stateName;
+    private int totalDrugDeaths;
+    private double drugDeathRate;
 
 
     // TODO: Create a constructor that takes all attributes as parameters
-
+    public StateData (String theStateName, int theTotalDrugDeaths, double theDrugDeathRate) {
+        theStateName = stateName;
+        theTotalDrugDeaths = totalDrugDeaths;
+        theDrugDeathRate = drugDeathRate;
+    }
 
     // TODO: Add getters for attributes you need
 
