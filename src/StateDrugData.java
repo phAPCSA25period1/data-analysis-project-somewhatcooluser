@@ -9,7 +9,7 @@
  *  - Override toString() to display the object's data
  *  - Add Javadoc comments for the class and all methods
  */
-public class StateData {
+public class StateDrugData {
 
     // TODO: Add at least 3 private attributes
     private String stateName;
@@ -18,14 +18,24 @@ public class StateData {
 
 
     // TODO: Create a constructor that takes all attributes as parameters
-    public StateData (String theStateName, int theTotalDrugDeaths, double theDrugDeathRate) {
+    public StateDrugData (String theStateName, int theTotalDrugDeaths, double theDrugDeathRate) {
         theStateName = stateName;
         theTotalDrugDeaths = totalDrugDeaths;
         theDrugDeathRate = drugDeathRate;
     }
 
     // TODO: Add getters for attributes you need
+    public String getStateName() {
+        return stateName;
+    }
 
+    public int getTotalDrugDeaths() {
+        return totalDrugDeaths;
+    }
+
+    public double getDrugDeathRate() {
+        return drugDeathRate;
+    }
     // TODO: Add other data analysis methods
 
     // TODO: Override toString() to return a readable representation of your object
