@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Scanner;
 
 /**
  * Main application for the Data Analysis Mini‑Project.
@@ -18,10 +19,10 @@ public class App {
     public static void main(String[] args) {
 
         // TODO: Update this with your CSV file path
-        File file = new File("data/your_dataset.csv");
+        File file = new File("data/StateData2020-CDC-Census.csv");
 
         // TODO: Create an array of Data objects to store data
-
+        StateDrugData[] stateList = new StateDrugData[52];
 
         // TODO: Read file using Scanner
         // - Skip header if needed
@@ -30,7 +31,19 @@ public class App {
         // - Convert text to numbers when needed
         // - Create new Data objects
         // - Add to your array
+        Scanner scan = new Scanner(file);
 
+        int i = 0;
+        while(scan.hasNext() && i < stateList.length) {
+            if (i == 0) {
+                scan.nextLine();
+            }
+            String line = scan.nextLine();
+            String[] parts = line.split(",");
+            String stateName = parts[0];
+            String totalDrugDeaths = parts[6];
+            String drugDeathRate = parts[5];
+        }
 
         // TODO: Call your analysis methods
         // Example:

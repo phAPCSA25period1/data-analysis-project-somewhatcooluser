@@ -37,7 +37,9 @@ public class StateDrugData {
         return drugDeathRate;
     }
     // TODO: Add other data analysis methods
-
+    public double minDrugDeathRate() {
+        
+    }
     // TODO: Override toString() to return a readable representation of your object
 
 }
