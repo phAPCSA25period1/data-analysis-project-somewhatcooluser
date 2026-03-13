@@ -66,12 +66,11 @@ UML_Diagram.png (or UML_Diagram.pdf)
 
 ## 🧩 Step 1 — Choose Your Dataset
 
-**Dataset Name:**  
+**Dataset Name: StateData2020-CDC-Census.csv**  
 **Source / Link:**  
 
 **What this dataset contains (2–3 sentences):**  
-____________________________________________________________________  
-____________________________________________________________________  
+All the states and various information about them. It gives info such as population and death rate from drugs.  
 
 ---
 
@@ -80,8 +79,7 @@ ____________________________________________________________________
 Your guiding question should be something you can answer using your dataset.
 
 **My guiding question:**  
-____________________________________________________________________  
-____________________________________________________________________  
+Which state had the highest drug death rate in 2016?  
 
 Examples:
 
@@ -145,8 +143,8 @@ You must write **at least two algorithms** to analyze your dataset.
 
 **Algorithms I will implement:**
 
-1. __________________________________________  
-2. __________________________________________  
+1. Minimum value of drug death rate.  
+2. Maximum value of drug death rate.  
 
 Optional extras:  
 - Sorting  
@@ -165,13 +163,10 @@ After analyzing your objects, print:
 - ✔ A clear answer to your guiding question  
 
 **My findings:**  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
+The lowest drug death rate was 6.4 from Nebraska. The highest was 52.0 from West Virginia.  
 
 **My answer to the guiding question:**  
-____________________________________________________________________  
-____________________________________________________________________  
+West Virginia had the highest drug death rate with 52.0.  
 
 ---
 
@@ -218,10 +213,7 @@ Write a short reflection (3–5 sentences):
 - How trustworthy are your insights?
 
 **My reflection:**  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
+There was one state that had unknown data. I had to get around that by skipping any values that are negative. My dataset isn't biased since it is simply finding the minimum and maximum drug death rate based on data that was already collected by the CDC.  
 
 ---
 

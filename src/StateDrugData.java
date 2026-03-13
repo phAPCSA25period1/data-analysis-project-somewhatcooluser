@@ -25,31 +25,56 @@ public class StateDrugData {
     }
 
     // TODO: Add getters for attributes you need
+    /**
+     * Returns the name of the state.
+     * @return the state name
+     */
     public String getStateName() {
         return stateName;
     }
 
+    /**
+     * Returns the total number of drug deaths in the state.
+     * @return the total drug deaths
+     */
     public int getTotalDrugDeaths() {
         return totalDrugDeaths;
     }
 
+    /**
+     * Returns the drug death rate for the state.
+     * @return the drug death rate
+     */
     public double getDrugDeathRate() {
         return drugDeathRate;
     }
     // TODO: Add other data analysis methods
+    /**
+     * Computes the minimum drug death rate from an array of StateDrugData objects.
+     * @param array
+     * @return the minimum drug death rate
+     */
     public static double minDrugDeathRate(StateDrugData[] array) {
-        if (array.length == 0) {
-            return 0.0; // or throw an exception, but for now return 0
-        }
-        double min = array[0].getDrugDeathRate();
-        for (int i = 1; i < array.length; i++) {
-            if (array[i].getDrugDeathRate() < min) {
-                min = array[i].getDrugDeathRate();
+        // Treat negative values as missing data and ignore them when computing the minimum.
+        double min = Double.NaN;
+        for (int i = 0; i < array.length; i++) {
+            double rate = array[i].getDrugDeathRate();
+            if (rate < 0) {
+                continue;
+            }
+            if (Double.isNaN(min) || rate < min) {
+                min = rate;
             }
         }
-        return min;
+        // If all values were missing/negative, return 0; caller can interpret this as "no valid data".
+        return Double.isNaN(min) ? 0.0 : min;
     }
     
+    /**
+     * Computes the maximum drug death rate from an array of StateDrugData objects.
+     * @param array
+     * @return the maximum drug death rate
+     */
     public static double maxDrugDeathRate(StateDrugData[] array) {
         if (array.length == 0) {
             return 0.0; // or throw an exception, but for now return 0

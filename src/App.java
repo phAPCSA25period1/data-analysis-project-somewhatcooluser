@@ -65,7 +65,7 @@ public class App {
             System.out.println("Number of states loaded: " + stateList.length);
             System.out.println("Minimum drug death rate: " + minRate);
             System.out.println("Maximum drug death rate: " + maxRate);
-            System.out.println("The state that had the highest drug death rate was West Virginia with a rate of 57.8 per 100,000 people in 2020.");
+            System.out.println("The state that had the highest drug death rate was West Virginia with a rate of 52.0 per 100,000 people in 2020.");
 
         // OPTIONAL TODO:
         // Add user interaction:
